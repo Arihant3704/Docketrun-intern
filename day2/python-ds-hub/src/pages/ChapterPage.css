@@ -1,0 +1,117 @@
+.chapter-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chapter-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.chapter-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+.chapter-content p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.chapter-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.callout {
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--text-accent);
+}
+
+.callout-info {
+    border-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.callout h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.callout p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+    max-width: 45%;
+}
+
+.nav-btn:hover {
+    background: var(--bg-secondary);
+}
+
+.nav-btn .label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.nav-btn .title {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.not-found {
+    text-align: center;
+    padding: 4rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.not-found h2 {
+    margin-bottom: 1rem;
+}
+
+.not-found p {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}

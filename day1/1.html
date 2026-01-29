@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Ecosystem: From Concept to Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Chart Container Custom Styles as per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        /* Custom Utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        
+        .nav-active {
+            border-bottom: 2px solid #EA580C;
+            color: #EA580C;
+            font-weight: 600;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .bounding-box {
+            position: absolute;
+            border: 3px solid #EF4444; /* Red border for annotation */
+            background-color: rgba(239, 68, 68, 0.2);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .label-tag {
+            background-color: #EF4444;
+            color: white;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    </style>
+    <!-- Chosen Palette: Warm Neutral & Orange Tech -->
+    <!-- Palette Description: Background #F5F5F4 (Stone 100) for a calm, academic feel. Primary Accent #EA580C (Orange 600) for energy/action. Secondary Accent #0EA5E9 (Sky 500) for data/cloud concepts. Text #1C1917 (Stone 900) for readability. -->
+    
+    <!-- Application Structure Plan: 
+         The app is designed as a vertical journey through the AI lifecycle, mirroring the logic of the source text: Definition -> Data -> Training -> Deployment -> Use Cases.
+         1. Hero Section: Immediate introduction to AI definition.
+         2. Hierarchy Explorer: An interactive 'Russian Doll' or tabbed view to clarify the AI > ML > DL > GenAI relationships described in the source.
+         3. The Data Lab: A functional section covering 'Dataset' and 'Annotation'. Includes an interactive 'Annotator' where users click to create bounding boxes, making the abstract concept of 'labeling' concrete.
+         4. Training Center: Uses Chart.js to simulate the 'Training' process (Epochs vs Loss), visualizing the concept of the model 'learning'. Includes Pre-trained model info.
+         5. Deployment Hub: A comparative view (Toggle/Cards) for Edge vs. Server, highlighting hardware specifics (RPi vs AWS).
+         6. Impact Grid: Cards for Use Cases (Agriculture, Robots, Industry).
+         Why: This linear but interactive structure helps the user build knowledge step-by-step, transforming raw definitions into a process flow.
+    -->
+
+    <!-- Visualization & Content Choices:
+         1. Taxonomy (AI/ML/DL): Goal -> Clarify definitions. Method -> Interactive Tabs/Cards. Interaction -> Click to reveal specific definition and context. Justification -> Reduces cognitive load by showing one definition at a time.
+         2. Annotation: Goal -> Explain 'Labeling'. Method -> Interactive HTML/CSS Canvas. Interaction -> Click button to 'draw' a bounding box on a CSS 'image'. Justification -> 'Show, don't tell' works best for explaining computer vision tasks.
+         3. Training Process: Goal -> Visualize 'Learning' and 'Epochs'. Method -> Chart.js Line Chart. Interaction -> 'Start Training' button triggers live data updates simulating loss reduction. Justification -> Dynamic charts effectively convey the concept of improvement over time (epochs).
+         4. Deployment: Goal -> Compare environments. Method -> Split Card Layout. Interaction -> Hover effects to emphasize hardware differences. Justification -> Side-by-side comparison makes the trade-offs clear.
+         5. Use Cases: Goal -> Show application. Method -> Icon Grid. Interaction -> Simple cards. Justification -> Clean summary of the source text's list.
+         NO SVG or Mermaid used.
+    -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">AI</div>
+                    <span class="font-bold text-xl tracking-tight text-stone-900">AI Explorer</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="scrollToSection('hierarchy')" class="nav-link text-stone-600 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">Hierarchy</button>
+                    <button onclick="scrollToSection('data-lab')" class="nav-link text-stone-600 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">Data & Annotation</button>
+                    <button onclick="scrollToSection('training')" class="nav-link text-stone-600 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">Training</button>
+                    <button onclick="scrollToSection('deployment')" class="nav-link text-stone-600 hover:text-orange-600 px-3 py-2 text-sm font-medium transition-colors">Deployment</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-stone-600 hover:text-orange-600 focus:outline-none">
+                        <span class="text-2xl">&#9776;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button onclick="scrollToSection('hierarchy')" class="block w-full text-left text-stone-600 hover:bg-orange-50 hover:text-orange-600 px-3 py-2 rounded-md text-base font-medium">Hierarchy</button>
+                <button onclick="scrollToSection('data-lab')" class="block w-full text-left text-stone-600 hover:bg-orange-50 hover:text-orange-600 px-3 py-2 rounded-md text-base font-medium">Data & Annotation</button>
+                <button onclick="scrollToSection('training')" class="block w-full text-left text-stone-600 hover:bg-orange-50 hover:text-orange-600 px-3 py-2 rounded-md text-base font-medium">Training</button>
+                <button onclick="scrollToSection('deployment')" class="block w-full text-left text-stone-600 hover:bg-orange-50 hover:text-orange-600 px-3 py-2 rounded-md text-base font-medium">Deployment</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-stone-900 tracking-tight mb-4">
+                Artificial Intelligence
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-stone-600">
+                Intelligence that mimics the nature of human thinking. Explore the ecosystem from data annotation to deployment on edge devices.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <button onclick="scrollToSection('hierarchy')" class="px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg shadow-lg transition-all transform hover:-translate-y-1">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 py-16">
+
+        <!-- Section 1: Hierarchy (Interactive) -->
+        <section id="hierarchy" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-900">The AI Hierarchy</h2>
+                <p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">
+                    Understanding the relationships between the core components of intelligent systems. Click the tabs below to explore each layer defined in the report.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Interactive Tabs -->
+                <div class="lg:col-span-4 space-y-2">
+                    <button onclick="updateHierarchy('AI')" id="btn-AI" class="hierarchy-btn w-full text-left px-6 py-4 rounded-xl border-2 border-orange-500 bg-orange-50 text-orange-800 font-bold shadow-sm transition-all flex items-center justify-between">
+                        <span>Artificial Intelligence (AI)</span>
+                        <span class="text-xl">&rarr;</span>
+                    </button>
+                    <button onclick="updateHierarchy('GENAI')" id="btn-GENAI" class="hierarchy-btn w-full text-left px-6 py-4 rounded-xl border border-stone-200 hover:border-orange-300 hover:bg-stone-50 text-stone-600 transition-all flex items-center justify-between">
+                        <span>Generative AI (Gen AI)</span>
+                        <span class="text-xl opacity-0">&rarr;</span>
+                    </button>
+                    <button onclick="updateHierarchy('ML')" id="btn-ML" class="hierarchy-btn w-full text-left px-6 py-4 rounded-xl border border-stone-200 hover:border-orange-300 hover:bg-stone-50 text-stone-600 transition-all flex items-center justify-between">
+                        <span>Machine Learning (ML)</span>
+                        <span class="text-xl opacity-0">&rarr;</span>
+                    </button>
+                    <button onclick="updateHierarchy('DL')" id="btn-DL" class="hierarchy-btn w-full text-left px-6 py-4 rounded-xl border border-stone-200 hover:border-orange-300 hover:bg-stone-50 text-stone-600 transition-all flex items-center justify-between">
+                        <span>Deep Learning (DL)</span>
+                        <span class="text-xl opacity-0">&rarr;</span>
+                    </button>
+                </div>
+
+                <!-- Display Area -->
+                <div class="lg:col-span-8 bg-white rounded-2xl shadow-xl border border-stone-100 p-8 flex flex-col justify-center min-h-[300px]">
+                    <div id="hierarchy-content" class="fade-in">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold tracking-wider uppercase">Root Concept</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900 mb-4" id="hierarchy-title">Artificial Intelligence</h3>
+                        <p class="text-lg text-stone-600 leading-relaxed" id="hierarchy-desc">
+                            An intelligence that mimics the same nature of human thinking. It is the broad umbrella under which all other intelligent processing concepts fall.
+                        </p>
+                        <div class="mt-6 pt-6 border-t border-stone-100">
+                            <p class="text-sm text-stone-400 font-medium">Relationship Flow:</p>
+                            <p class="text-stone-800 font-mono mt-2 bg-stone-100 p-2 rounded inline-block">AI > Gen AI > ML > DL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Data & Annotation (Interactive Lab) -->
+        <section id="data-lab" class="scroll-mt-24">
+            <div class="bg-stone-900 rounded-3xl overflow-hidden shadow-2xl text-white">
+                <div class="p-8 md:p-12">
+                    <div class="mb-10">
+                        <h2 class="text-3xl font-bold text-white mb-4">The Data Lab: Dataset & Annotation</h2>
+                        <p class="text-stone-300 text-lg">
+                            Before a model can learn, it needs data. This data comes from sources like Kaggle, HuggingFace, or GitHub, often in formats like .png or .jpg.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Column 1: Concept -->
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-orange-400 mb-2">1. Dataset Acquisition</h3>
+                                <p class="text-stone-300">Data is collected from videos and images to train models.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-stone-800 rounded-full text-sm border border-stone-700">Kaggle</span>
+                                    <span class="px-3 py-1 bg-stone-800 rounded-full text-sm border border-stone-700">HuggingFace</span>
+                                    <span class="px-3 py-1 bg-stone-800 rounded-full text-sm border border-stone-700">GitHub</span>
+                                    <span class="px-3 py-1 bg-stone-800 rounded-full text-sm border border-stone-700">COCO Dataset</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-orange-400 mb-2">2. Annotation Process</h3>
+                                <p class="text-stone-300 mb-4">
+                                    Labeling is crucial. It involves defining "Ground Truth" for the computer. For object classification, this often means drawing a <strong>bounding box</strong>.
+                                </p>
+                                <div class="bg-stone-800/50 p-4 rounded-lg border border-stone-700">
+                                    <p class="text-sm text-stone-400">Try the simulator on the right. Click "Annotate Dog" to simulate the labeling process used in training.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Interactive Simulator -->
+                        <div class="bg-stone-800 rounded-xl p-6 border border-stone-700 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-mono text-stone-500">IMAGE_DATA_001.JPG</span>
+                                <button id="annotate-btn" onclick="toggleAnnotation()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded shadow transition-colors">
+                                    Annotate Dog
+                                </button>
+                            </div>
+                            
+                            <!-- Simulation Canvas -->
+                            <div class="relative w-full h-64 bg-stone-200 rounded-lg overflow-hidden flex items-center justify-center group cursor-crosshair">
+                                <!-- Abstract Dog Representation (CSS Shapes) -->
+                                <div id="dog-subject" class="relative">
+                                    <div class="w-24 h-16 bg-stone-600 rounded-lg relative">
+                                        <!-- Head -->
+                                        <div class="absolute -top-6 -left-2 w-12 h-12 bg-stone-600 rounded-full"></div>
+                                        <!-- Ears -->
+                                        <div class="absolute -top-8 -left-2 w-4 h-6 bg-stone-700 rounded-full"></div>
+                                        <!-- Legs -->
+                                        <div class="absolute -bottom-4 left-2 w-4 h-6 bg-stone-600"></div>
+                                        <div class="absolute -bottom-4 right-2 w-4 h-6 bg-stone-600"></div>
+                                        <!-- Tail -->
+                                        <div class="absolute top-0 -right-6 w-8 h-2 bg-stone-600 rotate-[-20deg]"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Annotation Box (Hidden by default) -->
+                                <div id="annotation-box" class="hidden absolute border-4 border-red-500 bg-red-500/10 w-40 h-32 rounded flex flex-col justify-between">
+                                    <span class="bg-red-500 text-white text-xs font-bold px-1 self-start">dog: 0.98</span>
+                                    <div class="flex justify-between w-full px-1 pb-1">
+                                        <div class="w-2 h-2 bg-white rounded-full"></div>
+                                        <div class="w-2 h-2 bg-white rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 text-center text-sm text-stone-400 italic" id="annotation-feedback">Status: Unlabeled Image</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Training & Models -->
+        <section id="training" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-900">Training & Pre-trained Models</h2>
+                <p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">
+                    Training is the process where the model learns by fine-tuning its parameters over many "epochs" (cycles). We often start with pre-trained models to save time.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Training Controls & Info -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-stone-900 mb-2">Concept: Fine Tuning</h3>
+                        <p class="text-sm text-stone-600 mb-4">
+                            We use high epochs and large datasets to adjust the model's internal weights.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-stone-500">Epochs</span>
+                                <span class="font-mono font-bold">100</span>
+                            </div>
+                            <div class="w-full bg-stone-200 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-stone-900 mb-2">Pre-trained Models</h3>
+                        <p class="text-sm text-stone-600 mb-3">
+                            Instead of starting from scratch, we use models already trained on massive datasets.
+                        </p>
+                        <ul class="space-y-2 text-sm font-mono text-stone-700">
+                            <li class="flex items-center gap-2">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                .pt &rarr; YOLO (Object Detection)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                .caffe &rarr; MobileNet SSD
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="startTrainingSimulation()" id="train-btn" class="w-full py-3 bg-stone-900 hover:bg-stone-800 text-white font-bold rounded-xl shadow-lg transition-transform transform active:scale-95 flex items-center justify-center gap-2">
+                        <span>▶ Start Training Simulation</span>
+                    </button>
+                </div>
+
+                <!-- Chart Area -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg border border-stone-200 flex flex-col">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-lg text-stone-900">Training Loss Curve</h3>
+                        <span class="text-xs text-stone-400 uppercase tracking-wide">Live Metric</span>
+                    </div>
+                    
+                    <!-- Chart Container -->
+                    <div class="chart-container">
+                        <canvas id="trainingChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-center text-sm text-stone-500">
+                        As Epochs increase, Loss (error) decreases. This indicates the model is learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Deployment & Use Cases -->
+        <section id="deployment" class="scroll-mt-24 pb-20">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-stone-900 text-center">Deployment & Applications</h2>
+                <p class="mt-4 text-center text-stone-600">Where does the model live? And what does it do?</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Edge Deployment -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 p-8 transition-all hover:shadow-xl">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="text-9xl">⚡</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-teal-900 mb-2">Edge Device</h3>
+                    <p class="text-teal-800 mb-6 font-medium">Local processing on hardware.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white/60 p-3 rounded-lg backdrop-blur-sm">
+                            <span class="text-xs font-bold text-teal-700 uppercase">Benefits</span>
+                            <p class="text-sm text-stone-700">Data security, low latency, no internet needed.</p>
+                        </div>
+                        <div class="bg-white/60 p-3 rounded-lg backdrop-blur-sm">
+                            <span class="text-xs font-bold text-teal-700 uppercase">Hardware Examples</span>
+                            <p class="text-sm text-stone-700">Jetson Nano, Raspberry Pi, ESP32, FPGA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Server Deployment -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-8 transition-all hover:shadow-xl">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <span class="text-9xl">☁️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-2">Server / Cloud</h3>
+                    <p class="text-blue-800 mb-6 font-medium">Heavy computation on the network.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white/60 p-3 rounded-lg backdrop-blur-sm">
+                            <span class="text-xs font-bold text-blue-700 uppercase">Benefits</span>
+                            <p class="text-sm text-stone-700">Massive computational power (High GPU/TPU availability).</p>
+                        </div>
+                        <div class="bg-white/60 p-3 rounded-lg backdrop-blur-sm">
+                            <span class="text-xs font-bold text-blue-700 uppercase">Providers</span>
+                            <p class="text-sm text-stone-700">AWS Services, Google Cloud, Azure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use Cases Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Agriculture -->
+                <div class="bg-white rounded-xl shadow border border-stone-200 p-6 flex flex-col items-center text-center hover:border-orange-500 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-3xl mb-4">🌱</div>
+                    <h4 class="font-bold text-lg text-stone-900 mb-2">Agriculture</h4>
+                    <p class="text-sm text-stone-600">Crop monitoring and precision farming using vision models.</p>
+                </div>
+                <!-- Robots -->
+                <div class="bg-white rounded-xl shadow border border-stone-200 p-6 flex flex-col items-center text-center hover:border-orange-500 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center text-3xl mb-4">🤖</div>
+                    <h4 class="font-bold text-lg text-stone-900 mb-2">Robotics</h4>
+                    <p class="text-sm text-stone-600">Perceiving the environment and acting upon it autonomously.</p>
+                </div>
+                <!-- Industry -->
+                <div class="bg-white rounded-xl shadow border border-stone-200 p-6 flex flex-col items-center text-center hover:border-orange-500 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-3xl mb-4">🏭</div>
+                    <h4 class="font-bold text-lg text-stone-900 mb-2">Industry</h4>
+                    <p class="text-sm text-stone-600">Automated quality checks and defect detection on assembly lines.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 AI Ecosystem Interactive. Based on source report data.</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // --- Navigation Logic ---
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Hierarchy Data & Logic ---
+        const hierarchyData = {
+            'AI': {
+                title: 'Artificial Intelligence (AI)',
+                desc: 'An intelligence that mimics the same nature of human thinking. It is the broadest concept in the field.',
+                flow: 'AI > Gen AI > ML > DL',
+                tags: ['Root', 'Human Thinking']
+            },
+            'GENAI': {
+                title: 'Generative AI (Gen AI)',
+                desc: 'A subset focusing on generating new content. While nested within the broader scope, it represents a specific type of intelligence for creation.',
+                flow: 'AI > Gen AI > ML > DL',
+                tags: ['Creation', 'New Content']
+            },
+            'ML': {
+                title: 'Machine Learning (ML)',
+                desc: 'A subset of AI that enables systems to learn from data and improve from experience without being explicitly programmed.',
+                flow: 'AI > Gen AI > ML > DL',
+                tags: ['Learning', 'Data Driven']
+            },
+            'DL': {
+                title: 'Deep Learning (DL)',
+                desc: 'A specialized subset of ML based on artificial neural networks. It is the technology behind advanced models like YOLO and MobileNet.',
+                flow: 'AI > Gen AI > ML > DL',
+                tags: ['Neural Networks', 'Complex Models']
+            }
+        };
+
+        function updateHierarchy(key) {
+            // Update Visual State of Buttons
+            document.querySelectorAll('.hierarchy-btn').forEach(btn => {
+                btn.classList.remove('border-2', 'border-orange-500', 'bg-orange-50', 'text-orange-800', 'font-bold', 'shadow-sm');
+                btn.classList.add('border', 'border-stone-200', 'text-stone-600');
+                btn.querySelector('span:last-child').classList.add('opacity-0');
+            });
+
+            const activeBtn = document.getElementById(`btn-${key}`);
+            activeBtn.classList.remove('border', 'border-stone-200', 'text-stone-600');
+            activeBtn.classList.add('border-2', 'border-orange-500', 'bg-orange-50', 'text-orange-800', 'font-bold', 'shadow-sm');
+            activeBtn.querySelector('span:last-child').classList.remove('opacity-0');
+
+            // Update Content with Animation
+            const contentDiv = document.getElementById('hierarchy-content');
+            contentDiv.classList.remove('fade-in');
+            void contentDiv.offsetWidth; // trigger reflow
+            contentDiv.classList.add('fade-in');
+
+            const data = hierarchyData[key];
+            document.getElementById('hierarchy-title').textContent = data.title;
+            document.getElementById('hierarchy-desc').textContent = data.desc;
+        }
+
+        // --- Annotation Logic ---
+        let isAnnotated = false;
+        function toggleAnnotation() {
+            const box = document.getElementById('annotation-box');
+            const btn = document.getElementById('annotate-btn');
+            const feedback = document.getElementById('annotation-feedback');
+
+            if (!isAnnotated) {
+                // Annotate
+                box.classList.remove('hidden');
+                btn.textContent = "Reset Image";
+                btn.classList.remove('bg-blue-600', 'hover:bg-blue-500');
+                btn.classList.add('bg-stone-600', 'hover:bg-stone-500');
+                feedback.textContent = "Status: Object Labeled (Bounding Box: [x,y,w,h])";
+                feedback.classList.add('text-green-400');
+                feedback.classList.remove('text-stone-400');
+                isAnnotated = true;
+            } else {
+                // Reset
+                box.classList.add('hidden');
+                btn.textContent = "Annotate Dog";
+                btn.classList.add('bg-blue-600', 'hover:bg-blue-500');
+                btn.classList.remove('bg-stone-600', 'hover:bg-stone-500');
+                feedback.textContent = "Status: Unlabeled Image";
+                feedback.classList.remove('text-green-400');
+                feedback.classList.add('text-stone-400');
+                isAnnotated = false;
+            }
+        }
+
+        // --- Training Chart Logic ---
+        let trainingChart;
+        let chartInterval;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('trainingChart').getContext('2d');
+            
+            Chart.defaults.font.family = 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+            
+            trainingChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Training Loss',
+                        data: [],
+                        borderColor: '#EA580C', // Orange 600
+                        backgroundColor: 'rgba(234, 88, 12, 0.1)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#EA580C',
+                        pointRadius: 4,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: { usePointStyle: true }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `Loss: ${context.parsed.y.toFixed(4)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 1.0,
+                            title: { display: true, text: 'Loss (Error)' },
+                            grid: { borderDash: [2, 4] }
+                        },
+                        x: {
+                            title: { display: true, text: 'Epochs' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        });
+
+        function startTrainingSimulation() {
+            const btn = document.getElementById('train-btn');
+            if (chartInterval) {
+                // Stop if running
+                clearInterval(chartInterval);
+                chartInterval = null;
+                btn.innerHTML = '<span>▶ Start Training Simulation</span>';
+                btn.classList.remove('bg-red-600', 'hover:bg-red-500');
+                btn.classList.add('bg-stone-900', 'hover:bg-stone-800');
+                return;
+            }
+
+            // Reset Chart
+            trainingChart.data.labels = [];
+            trainingChart.data.datasets[0].data = [];
+            trainingChart.update();
+
+            btn.innerHTML = '<span>⏹ Stop Simulation</span>';
+            btn.classList.remove('bg-stone-900', 'hover:bg-stone-800');
+            btn.classList.add('bg-red-600', 'hover:bg-red-500');
+
+            let epoch = 0;
+            let loss = 0.95;
+
+            chartInterval = setInterval(() => {
+                epoch++;
+                
+                // Simulate exponential decay of loss
+                loss = loss * 0.85 + (Math.random() * 0.05); // Decay + noise
+                if (loss < 0.05) loss = 0.05;
+
+                trainingChart.data.labels.push(`Epoch ${epoch}`);
+                trainingChart.data.datasets[0].data.push(loss);
+                
+                // Keep chart moving
+                if (trainingChart.data.labels.length > 10) {
+                    trainingChart.data.labels.shift();
+                    trainingChart.data.datasets[0].data.shift();
+                }
+
+                trainingChart.update();
+
+                if (epoch >= 50) { // Auto stop
+                    clearInterval(chartInterval);
+                    chartInterval = null;
+                    btn.innerHTML = '<span>▶ Restart Simulation</span>';
+                    btn.classList.remove('bg-red-600', 'hover:bg-red-500');
+                    btn.classList.add('bg-stone-900', 'hover:bg-stone-800');
+                }
+            }, 600); // Update every 600ms
+        }
+    </script>
+</body>
+</html>
