@@ -1,0 +1,308 @@
+Ultralytics 8.4.8 🚀 Python-3.10.12 torch-2.9.1+cu128 CPU (AMD Ryzen 7 4800H with Radeon Graphics)
+YOLO11n summary (fused): 100 layers, 2,616,248 parameters, 0 gradients, 6.5 GFLOPs
+
+video 1/1 (frame 1/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 3 cars, 72.3ms
+video 1/1 (frame 2/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 3 cars, 52.4ms
+video 1/1 (frame 3/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 3 cars, 46.5ms
+video 1/1 (frame 4/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 4 persons, 3 cars, 45.7ms
+video 1/1 (frame 5/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 41.8ms
+video 1/1 (frame 6/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 51.8ms
+video 1/1 (frame 7/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 50.5ms
+video 1/1 (frame 8/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 49.4ms
+video 1/1 (frame 9/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 50.9ms
+video 1/1 (frame 10/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 4 persons, 4 cars, 48.5ms
+video 1/1 (frame 11/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 4 cars, 48.9ms
+video 1/1 (frame 12/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 53.7ms
+video 1/1 (frame 13/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 50.0ms
+video 1/1 (frame 14/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 4 cars, 52.4ms
+video 1/1 (frame 15/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 4 cars, 53.1ms
+video 1/1 (frame 16/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 4 cars, 49.5ms
+video 1/1 (frame 17/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 42.0ms
+video 1/1 (frame 18/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 1 truck, 44.5ms
+video 1/1 (frame 19/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 4 cars, 49.1ms
+video 1/1 (frame 20/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 4 cars, 42.8ms
+video 1/1 (frame 21/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 4 cars, 44.8ms
+video 1/1 (frame 22/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 4 cars, 47.0ms
+video 1/1 (frame 23/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 4 cars, 41.5ms
+video 1/1 (frame 24/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 41.7ms
+video 1/1 (frame 25/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 42.3ms
+video 1/1 (frame 26/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 42.2ms
+video 1/1 (frame 27/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 43.3ms
+video 1/1 (frame 28/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 44.7ms
+video 1/1 (frame 29/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 44.8ms
+video 1/1 (frame 30/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 43.3ms
+video 1/1 (frame 31/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.5ms
+video 1/1 (frame 32/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.5ms
+video 1/1 (frame 33/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 50.9ms
+video 1/1 (frame 34/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.2ms
+video 1/1 (frame 35/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.3ms
+video 1/1 (frame 36/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 44.4ms
+video 1/1 (frame 37/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 41.4ms
+video 1/1 (frame 38/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 48.2ms
+video 1/1 (frame 39/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 50.1ms
+video 1/1 (frame 40/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 45.7ms
+video 1/1 (frame 41/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 43.0ms
+video 1/1 (frame 42/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 45.6ms
+video 1/1 (frame 43/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 44.3ms
+video 1/1 (frame 44/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 47.2ms
+video 1/1 (frame 45/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 44.7ms
+video 1/1 (frame 46/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 45.6ms
+video 1/1 (frame 47/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 44.0ms
+video 1/1 (frame 48/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 54.1ms
+video 1/1 (frame 49/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 51.8ms
+video 1/1 (frame 50/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 48.9ms
+video 1/1 (frame 51/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 44.0ms
+video 1/1 (frame 52/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 47.5ms
+video 1/1 (frame 53/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 43.1ms
+video 1/1 (frame 54/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 46.7ms
+video 1/1 (frame 55/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 1 truck, 45.0ms
+video 1/1 (frame 56/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 45.0ms
+video 1/1 (frame 57/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 1 truck, 45.0ms
+video 1/1 (frame 58/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 1 truck, 43.8ms
+video 1/1 (frame 59/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 45.3ms
+video 1/1 (frame 60/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.3ms
+video 1/1 (frame 61/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 47.6ms
+video 1/1 (frame 62/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 44.7ms
+video 1/1 (frame 63/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 50.1ms
+video 1/1 (frame 64/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 46.7ms
+video 1/1 (frame 65/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 51.5ms
+video 1/1 (frame 66/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 45.2ms
+video 1/1 (frame 67/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 1 truck, 43.0ms
+video 1/1 (frame 68/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 46.1ms
+video 1/1 (frame 69/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 1 truck, 50.8ms
+video 1/1 (frame 70/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 8 cars, 47.3ms
+video 1/1 (frame 71/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 8 cars, 46.5ms
+video 1/1 (frame 72/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 45.9ms
+video 1/1 (frame 73/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 50.3ms
+video 1/1 (frame 74/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 6 cars, 44.5ms
+video 1/1 (frame 75/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 45.7ms
+video 1/1 (frame 76/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 48.8ms
+video 1/1 (frame 77/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 7 cars, 48.3ms
+video 1/1 (frame 78/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 6 cars, 50.4ms
+video 1/1 (frame 79/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 6 cars, 49.0ms
+video 1/1 (frame 80/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 6 cars, 49.2ms
+video 1/1 (frame 81/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 6 cars, 48.5ms
+video 1/1 (frame 82/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 6 cars, 48.6ms
+video 1/1 (frame 83/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 6 cars, 40.6ms
+video 1/1 (frame 84/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 8 cars, 41.2ms
+video 1/1 (frame 85/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 7 cars, 40.9ms
+video 1/1 (frame 86/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 7 cars, 40.1ms
+video 1/1 (frame 87/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 7 cars, 37.4ms
+video 1/1 (frame 88/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 6 cars, 41.4ms
+video 1/1 (frame 89/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 3 persons, 7 cars, 43.2ms
+video 1/1 (frame 90/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 8 cars, 38.9ms
+video 1/1 (frame 91/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 8 cars, 43.5ms
+video 1/1 (frame 92/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 5 cars, 41.5ms
+video 1/1 (frame 93/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 2 persons, 5 cars, 44.3ms
+video 1/1 (frame 94/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 37.6ms
+video 1/1 (frame 95/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 43.6ms
+video 1/1 (frame 96/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 44.0ms
+video 1/1 (frame 97/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.2ms
+video 1/1 (frame 98/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 44.7ms
+video 1/1 (frame 99/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 1 truck, 39.9ms
+video 1/1 (frame 100/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.5ms
+video 1/1 (frame 101/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 1 truck, 40.8ms
+video 1/1 (frame 102/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 1 keyboard, 43.5ms
+video 1/1 (frame 103/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 39.8ms
+video 1/1 (frame 104/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 46.6ms
+video 1/1 (frame 105/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 40.9ms
+video 1/1 (frame 106/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 45.8ms
+video 1/1 (frame 107/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 40.4ms
+video 1/1 (frame 108/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 49.9ms
+video 1/1 (frame 109/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 43.7ms
+video 1/1 (frame 110/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 38.2ms
+video 1/1 (frame 111/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 5 cars, 42.0ms
+video 1/1 (frame 112/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 39.6ms
+video 1/1 (frame 113/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 47.8ms
+video 1/1 (frame 114/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 43.6ms
+video 1/1 (frame 115/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 40.5ms
+video 1/1 (frame 116/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 8 cars, 40.6ms
+video 1/1 (frame 117/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 40.7ms
+video 1/1 (frame 118/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 39.8ms
+video 1/1 (frame 119/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 38.7ms
+video 1/1 (frame 120/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.6ms
+video 1/1 (frame 121/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 46.8ms
+video 1/1 (frame 122/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.9ms
+video 1/1 (frame 123/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 46.3ms
+video 1/1 (frame 124/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 42.2ms
+video 1/1 (frame 125/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 40.5ms
+video 1/1 (frame 126/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 41.0ms
+video 1/1 (frame 127/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 41.9ms
+video 1/1 (frame 128/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.6ms
+video 1/1 (frame 129/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 40.0ms
+video 1/1 (frame 130/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 1 truck, 44.5ms
+video 1/1 (frame 131/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.3ms
+video 1/1 (frame 132/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.9ms
+video 1/1 (frame 133/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 1 truck, 40.4ms
+video 1/1 (frame 134/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 42.2ms
+video 1/1 (frame 135/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 1 truck, 47.7ms
+video 1/1 (frame 136/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 41.1ms
+video 1/1 (frame 137/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 6 cars, 1 truck, 41.0ms
+video 1/1 (frame 138/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 39.8ms
+video 1/1 (frame 139/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 7 cars, 1 truck, 48.2ms
+video 1/1 (frame 140/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 50.2ms
+video 1/1 (frame 141/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 47.0ms
+video 1/1 (frame 142/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 54.3ms
+video 1/1 (frame 143/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 9 cars, 50.5ms
+video 1/1 (frame 144/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 10 cars, 42.4ms
+video 1/1 (frame 145/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 10 cars, 1 truck, 40.3ms
+video 1/1 (frame 146/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 1 truck, 44.6ms
+video 1/1 (frame 147/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 11 cars, 1 truck, 46.1ms
+video 1/1 (frame 148/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 10 cars, 40.0ms
+video 1/1 (frame 149/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 40.5ms
+video 1/1 (frame 150/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 42.5ms
+video 1/1 (frame 151/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 42.7ms
+video 1/1 (frame 152/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 40.3ms
+video 1/1 (frame 153/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 41.0ms
+video 1/1 (frame 154/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 43.1ms
+video 1/1 (frame 155/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 42.2ms
+video 1/1 (frame 156/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 42.6ms
+video 1/1 (frame 157/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 42.4ms
+video 1/1 (frame 158/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 45.5ms
+video 1/1 (frame 159/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 40.7ms
+video 1/1 (frame 160/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 45.9ms
+video 1/1 (frame 161/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 50.3ms
+video 1/1 (frame 162/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 46.5ms
+video 1/1 (frame 163/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 46.1ms
+video 1/1 (frame 164/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 45.8ms
+video 1/1 (frame 165/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 49.7ms
+video 1/1 (frame 166/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 11 cars, 40.5ms
+video 1/1 (frame 167/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 40.4ms
+video 1/1 (frame 168/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 42.8ms
+video 1/1 (frame 169/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 45.3ms
+video 1/1 (frame 170/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 43.9ms
+video 1/1 (frame 171/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 40.5ms
+video 1/1 (frame 172/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 48.9ms
+video 1/1 (frame 173/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 40.8ms
+video 1/1 (frame 174/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 42.6ms
+video 1/1 (frame 175/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 45.5ms
+video 1/1 (frame 176/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 12 cars, 43.5ms
+video 1/1 (frame 177/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 11 cars, 1 truck, 43.4ms
+video 1/1 (frame 178/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 39.2ms
+video 1/1 (frame 179/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 13 cars, 43.5ms
+video 1/1 (frame 180/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 11 cars, 1 truck, 41.7ms
+video 1/1 (frame 181/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 42.9ms
+video 1/1 (frame 182/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 39.8ms
+video 1/1 (frame 183/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 43.7ms
+video 1/1 (frame 184/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 15 cars, 42.3ms
+video 1/1 (frame 185/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 16 cars, 41.3ms
+video 1/1 (frame 186/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 14 cars, 44.5ms
+video 1/1 (frame 187/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 1 person, 16 cars, 49.4ms
+video 1/1 (frame 188/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 truck, 64.9ms
+video 1/1 (frame 189/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 48.8ms
+video 1/1 (frame 190/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 61.0ms
+video 1/1 (frame 191/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 truck, 59.0ms
+video 1/1 (frame 192/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 truck, 55.5ms
+video 1/1 (frame 193/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 truck, 50.6ms
+video 1/1 (frame 194/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 48.3ms
+video 1/1 (frame 195/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 55.1ms
+video 1/1 (frame 196/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 48.2ms
+video 1/1 (frame 197/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 truck, 46.1ms
+video 1/1 (frame 198/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 50.6ms
+video 1/1 (frame 199/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 47.3ms
+video 1/1 (frame 200/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 47.3ms
+video 1/1 (frame 201/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 45.5ms
+video 1/1 (frame 202/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 11 cars, 40.9ms
+video 1/1 (frame 203/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 38.8ms
+video 1/1 (frame 204/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 42.5ms
+video 1/1 (frame 205/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 40.4ms
+video 1/1 (frame 206/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 truck, 42.8ms
+video 1/1 (frame 207/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 39.6ms
+video 1/1 (frame 208/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 44.9ms
+video 1/1 (frame 209/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 truck, 42.5ms
+video 1/1 (frame 210/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 truck, 46.4ms
+video 1/1 (frame 211/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 truck, 45.9ms
+video 1/1 (frame 212/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 1 truck, 39.1ms
+video 1/1 (frame 213/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 truck, 43.9ms
+video 1/1 (frame 214/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 truck, 42.2ms
+video 1/1 (frame 215/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 48.8ms
+video 1/1 (frame 216/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 49.0ms
+video 1/1 (frame 217/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 45.9ms
+video 1/1 (frame 218/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 48.9ms
+video 1/1 (frame 219/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 41.4ms
+video 1/1 (frame 220/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 47.7ms
+video 1/1 (frame 221/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 bus, 1 truck, 41.6ms
+video 1/1 (frame 222/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 44.1ms
+video 1/1 (frame 223/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 40.9ms
+video 1/1 (frame 224/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 2 buss, 1 truck, 46.0ms
+video 1/1 (frame 225/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 49.4ms
+video 1/1 (frame 226/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 44.8ms
+video 1/1 (frame 227/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 46.8ms
+video 1/1 (frame 228/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 49.2ms
+video 1/1 (frame 229/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 46.4ms
+video 1/1 (frame 230/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 45.1ms
+video 1/1 (frame 231/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 48.6ms
+video 1/1 (frame 232/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 47.1ms
+video 1/1 (frame 233/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 46.8ms
+video 1/1 (frame 234/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 43.5ms
+video 1/1 (frame 235/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 39.9ms
+video 1/1 (frame 236/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 38.8ms
+video 1/1 (frame 237/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 40.5ms
+video 1/1 (frame 238/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 42.7ms
+video 1/1 (frame 239/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 39.9ms
+video 1/1 (frame 240/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 45.5ms
+video 1/1 (frame 241/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 38.2ms
+video 1/1 (frame 242/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 42.1ms
+video 1/1 (frame 243/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 39.0ms
+video 1/1 (frame 244/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 41.2ms
+video 1/1 (frame 245/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 40.5ms
+video 1/1 (frame 246/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 43.9ms
+video 1/1 (frame 247/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 truck, 43.8ms
+video 1/1 (frame 248/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 42.0ms
+video 1/1 (frame 249/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 41.2ms
+video 1/1 (frame 250/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 2 buss, 1 truck, 41.3ms
+video 1/1 (frame 251/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 41.0ms
+video 1/1 (frame 252/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 46.8ms
+video 1/1 (frame 253/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 45.4ms
+video 1/1 (frame 254/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 bus, 1 truck, 41.0ms
+video 1/1 (frame 255/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 46.9ms
+video 1/1 (frame 256/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 truck, 43.6ms
+video 1/1 (frame 257/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 43.8ms
+video 1/1 (frame 258/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 44.2ms
+video 1/1 (frame 259/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 42.4ms
+video 1/1 (frame 260/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 bus, 1 truck, 39.6ms
+video 1/1 (frame 261/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 39.5ms
+video 1/1 (frame 262/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 13 cars, 1 bus, 1 truck, 39.6ms
+video 1/1 (frame 263/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 43.2ms
+video 1/1 (frame 264/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 1 bus, 1 truck, 45.6ms
+video 1/1 (frame 265/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 42.4ms
+video 1/1 (frame 266/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 2 buss, 1 truck, 43.9ms
+video 1/1 (frame 267/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 2 buss, 1 truck, 40.8ms
+video 1/1 (frame 268/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 2 buss, 1 truck, 41.2ms
+video 1/1 (frame 269/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 2 buss, 1 truck, 42.6ms
+video 1/1 (frame 270/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 2 buss, 1 truck, 40.9ms
+video 1/1 (frame 271/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 2 buss, 1 truck, 41.2ms
+video 1/1 (frame 272/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 2 buss, 41.8ms
+video 1/1 (frame 273/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 41.3ms
+video 1/1 (frame 274/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 45.6ms
+video 1/1 (frame 275/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 45.5ms
+video 1/1 (frame 276/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 truck, 45.4ms
+video 1/1 (frame 277/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 bus, 1 truck, 41.8ms
+video 1/1 (frame 278/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 train, 1 truck, 45.0ms
+video 1/1 (frame 279/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 bus, 1 truck, 46.1ms
+video 1/1 (frame 280/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 1 bus, 1 train, 1 truck, 42.6ms
+video 1/1 (frame 281/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 train, 1 truck, 46.6ms
+video 1/1 (frame 282/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 train, 1 truck, 40.7ms
+video 1/1 (frame 283/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 3 buss, 1 train, 1 truck, 39.5ms
+video 1/1 (frame 284/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 train, 1 truck, 41.7ms
+video 1/1 (frame 285/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 1 bus, 1 train, 1 truck, 47.0ms
+video 1/1 (frame 286/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 18 cars, 1 bus, 1 train, 1 truck, 42.3ms
+video 1/1 (frame 287/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 18 cars, 1 bus, 1 train, 1 truck, 43.4ms
+video 1/1 (frame 288/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 3 buss, 1 truck, 40.6ms
+video 1/1 (frame 289/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 4 buss, 1 train, 1 truck, 43.4ms
+video 1/1 (frame 290/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 17 cars, 2 buss, 1 train, 38.8ms
+video 1/1 (frame 291/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 16 cars, 2 buss, 42.0ms
+video 1/1 (frame 292/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 4 buss, 43.2ms
+video 1/1 (frame 293/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 4 buss, 39.0ms
+video 1/1 (frame 294/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 3 buss, 42.2ms
+video 1/1 (frame 295/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 bus, 1 train, 39.6ms
+video 1/1 (frame 296/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 2 buss, 1 train, 41.0ms
+video 1/1 (frame 297/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 2 buss, 1 train, 42.0ms
+video 1/1 (frame 298/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 train, 42.3ms
+video 1/1 (frame 299/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 12 cars, 1 train, 41.8ms
+video 1/1 (frame 300/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 train, 42.7ms
+video 1/1 (frame 301/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 15 cars, 1 train, 42.7ms
+video 1/1 (frame 302/302) /home/arihant/intern/day4/compare/adas_video.mp4: 384x640 14 cars, 1 train, 42.4ms
+Speed: 1.9ms preprocess, 44.5ms inference, 0.8ms postprocess per image at shape (1, 3, 384, 640)
+Results saved to [1m/home/arihant/runs/detect/predict21[0m
+💡 Learn more at https://docs.ultralytics.com/modes/predict
