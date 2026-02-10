@@ -1,6 +1,6 @@
 # Internship Project Portfolio
 
-Welcome to my internship project repository. This directory contains the work completed over three days, focusing on **AI Development**, **Computer Vision**, and **Full-stack Web Applications**.
+Welcome to my internship project repository. This directory contains the work completed over **five days**, focusing on **AI Development**, **Computer Vision**, and **Full-stack Web Applications**.
 
 ## 📁 Project Structure
 
@@ -20,6 +20,26 @@ Welcome to my internship project repository. This directory contains the work co
   - **Frontend**: React/Vite with real-time video/image segmentation visualization.
 - **Model Training**: Jupyter notebooks for training custom YOLO models on unique datasets.
 - **Dataset**: Custom `.pt` model weights and training results.
+
+### [Day 4: Real-time Detection & Experimentation](./day4)
+- **Real-time Inference**: Scripts for running YOLO on video streams and files (`run_yolo.py`, `live.py`).
+- **Experimentation**: Tools for verifying model tracking and detection thresholds (`run_experiments.py`).
+- **Video Processing**: Automated processing of safety footage with confident detection overlays.
+
+### [Day 5: Model Optimization & Deployment](./day5)
+- **Model Optimization**: Analysis and optimization of YOLOv8 detection and segmentation models.
+- **ONNX Conversion**: Scripts to convert models to ONNX and Float16 (Half Precision) for improved efficiency.
+- **Benchmarking**: Performance comparison tools enabling trade-off analysis between Accuracy, Speed, and Size.
+- **Highlights**: Achieved ~50% size reduction for segmentation models with FP16 quantization.
+
+### [Day 6: Conveyor Belt Analysis (Initial)](./day6)
+- **Script**: `analyze_conveyor.py` setup for basic belt detection.
+- **YOLOv8**: Tracking integration for moving objects.
+
+### [Day 7: Advanced Conveyor Analysis](./day7)
+- **Hybrid Detection**: Combined YOLOv8 (Belt) + Canny Edge (Coal/Object) + Optical Flow (Movement).
+- **Performance**: Tuned completely local pipeline for high-speed analysis.
+- **Key Feature**: Robust object detection on moving belts using edge density thresholding (Tuned to 5075).
 
 ---
 

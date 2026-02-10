@@ -1,0 +1,4 @@
+names: ['person']
+path: /home/arihant/intern/day10/projects/123/export_yolo
+train: images
+val: images

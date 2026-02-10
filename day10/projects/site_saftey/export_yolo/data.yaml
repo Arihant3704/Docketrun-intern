@@ -1,0 +1,4 @@
+names: ['PG', 'PH']
+path: projects/site_saftey/export_yolo
+train: images
+val: images

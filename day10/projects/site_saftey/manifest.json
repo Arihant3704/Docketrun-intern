@@ -1,0 +1,9 @@
+{
+  "name": "site_saftey",
+  "video_path": "/home/arihant/intern/day4/Construction_Site_Safety_Video_Generation.mp4",
+  "classes": [
+    "object"
+  ],
+  "version": "1.0.0",
+  "model_path": "/home/arihant/intern/day10/sam2_t.pt"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "123",
+  "video_path": "/home/arihant/intern/day4/Construction_Safety_Hazard_CCTV_Video.mp4",
+  "classes": [
+    "object"
+  ],
+  "version": "1.0.0"
+}

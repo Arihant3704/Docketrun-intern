@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Industry Problems in Computer Vision</title>
+
+<style>
+
+/* -------- A4 PAGE SETUP -------- */
+@page {
+    size: A4;
+    margin: 25mm 25mm 25mm 25mm;
+}
+
+/* -------- BODY -------- */
+body {
+    font-family: "Times New Roman", serif;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    background: #fff;
+    counter-reset: page;
+}
+
+/* -------- HEADINGS -------- */
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 34px;
+    margin-top: 150px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 50px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* -------- TEXT -------- */
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+ul {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* -------- PAGE BREAK -------- */
+.page-break {
+    page-break-before: always;
+}
+
+/* -------- PAGE NUMBER -------- */
+@media print {
+    body {
+        counter-reset: page;
+    }
+
+    footer::after {
+        counter-increment: page;
+        content: "Page " counter(page);
+    }
+
+    footer {
+        position: fixed;
+        bottom: 10mm;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Industry Problems in Computer Vision</h1>
+
+<div class="page-break"></div>
+
+
+<h2>1. Introduction</h2>
+
+<p>
+In recent years, industries have started using Artificial Intelligence and
+automation to improve their working systems. One of the most important
+technologies in this field is Computer Vision.
+</p>
+
+<p>
+Computer Vision allows machines to understand images and videos in a similar
+way to human vision. It helps industries reduce manual work, improve accuracy,
+and save time. This document explains major industrial problems that can be
+solved using Computer Vision techniques.
+</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>2. Manufacturing Industry</h2>
+<h3>Automated Defect Detection System</h3>
+
+<p><b>Problem Description:</b></p>
+
+<p>
+In manufacturing industries, product quality is very important.
+Traditionally, workers check products manually. Due to fatigue and
+human limitations, small defects may not be noticed.
+</p>
+
+<p><b>Objectives:</b></p>
+
+<ul>
+<li>Detect cracks and scratches</li>
+<li>Reduce human effort</li>
+<li>Improve product quality</li>
+<li>Reduce losses</li>
+</ul>
+
+<p><b>Tools Used:</b> Python, OpenCV, PyTorch</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>3. Security Industry</h2>
+<h3>Smart Surveillance System</h3>
+
+<p>
+Security officers cannot continuously monitor many CCTV cameras.
+Important activities may be missed.
+</p>
+
+<ul>
+<li>Detect intruders</li>
+<li>Track people</li>
+<li>Generate alerts</li>
+</ul>
+
+<p><b>Tools Used:</b> OpenCV, TensorFlow</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>4. Agriculture Industry</h2>
+<h3>Crop Disease Detection System</h3>
+
+<p>
+Farmers often identify plant diseases late, which causes crop loss.
+</p>
+
+<ul>
+<li>Identify plant diseases</li>
+<li>Suggest treatment</li>
+<li>Increase yield</li>
+</ul>
+
+<p><b>Tools:</b> Keras, OpenCV</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>5. Logistics Industry</h2>
+<h3>Conveyor Belt Monitoring System</h3>
+
+<p>
+Conveyor belts are important in factories. If a belt stops, production
+stops.
+</p>
+
+<ul>
+<li>Detect belt movement</li>
+<li>Detect material presence</li>
+<li>Identify jams</li>
+</ul>
+
+<p><b>Tools:</b> OpenCV, PyTorch</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>6. Transportation Industry</h2>
+<h3>Drone Obstacle Detection System</h3>
+
+<p>
+Drones may crash if obstacles are not detected in time.
+</p>
+
+<ul>
+<li>Detect obstacles</li>
+<li>Avoid collision</li>
+<li>Improve safety</li>
+</ul>
+
+<p><b>Tools:</b> ROS, OpenCV, Jetson</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>7. Retail Industry</h2>
+<h3>Customer Behavior Analysis</h3>
+
+<p>
+Stores want to understand customer interest and movement.
+</p>
+
+<ul>
+<li>Track customers</li>
+<li>Create heatmaps</li>
+<li>Improve sales</li>
+</ul>
+
+<p><b>Tools:</b> OpenPose, Python</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>8. Healthcare Industry</h2>
+<h3>Medical Image Analysis</h3>
+
+<p>
+Doctors analyze many medical images daily. AI can assist in diagnosis.
+</p>
+
+<ul>
+<li>Detect diseases</li>
+<li>Support doctors</li>
+<li>Reduce workload</li>
+</ul>
+
+<p><b>Tools:</b> TensorFlow, Keras</p>
+
+
+<div class="page-break"></div>
+
+
+<h2>9. Future Scope</h2>
+
+<ul>
+<li>Edge AI deployment</li>
+<li>FPGA acceleration</li>
+<li>Cloud integration</li>
+<li>Improved accuracy</li>
+</ul>
+
+
+<div class="page-break"></div>
+
+
+<h2>10. Conclusion</h2>
+
+<p>
+Computer Vision is helping industries become smarter and more efficient.
+The projects discussed in this document show how real-world problems can
+be solved using AI technology.
+</p>
+
+
+<footer></footer>
+
+</body>
+</html>
+

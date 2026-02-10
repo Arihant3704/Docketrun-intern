@@ -1,0 +1,4 @@
+names: ['p']
+path: /home/arihant/intern/day10/projects/1/export_yolo
+train: images
+val: images

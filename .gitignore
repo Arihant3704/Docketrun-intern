@@ -58,3 +58,5 @@ dist-ssr/
 Thumbs.db
 uploads/
 results/
+day5/APP/mobileclip2_b.ts
+*.ts
